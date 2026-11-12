@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /drafts/
+Disallow: /scripts/
 
 Sitemap: https://brakehydro.com/sitemap.xml

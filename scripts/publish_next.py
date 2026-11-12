@@ -119,6 +119,11 @@ def main():
     args = ap.parse_args()
     date = dt.date.fromisoformat(args.date) if args.date else dt.date.today()
 
+    # Début des publications : crédits Netlify épuisés jusqu'au 3 décembre 2026
+    if not args.date and date < dt.date(2026, 12, 7):
+        print("Publications en pause jusqu'au 7 décembre 2026.")
+        return
+
     queue = sorted(DRAFTS.glob("*.json"))
     if not queue:
         print("Aucun article en attente.")

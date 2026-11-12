@@ -26,6 +26,11 @@ a{color:#00b4d8}
 footer{text-align:center;font-size:12px;color:#7f8db0;padding:28px 5%;border-top:1px solid rgba(0,71,255,.25)}
 footer a{color:#7f8db0;margin:0 10px}
 </style>
+<!-- PostHog : mesure d'audience sans cookie (persistence memory) -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags on onFeatureFlags onSessionId identify setPersonProperties group resetGroups reset get_distinct_id get_session_id alias set_config startSessionRecording stopSessionRecording captureException get_property getSessionProperty opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_DcAYg4HQiuc8A2xaFfYbxqsqpzTZNP3iFeGcGfFyYvwR',{api_host:'https://us.i.posthog.com',defaults:'2025-05-24',persistence:'memory',person_profiles:'identified_only',disable_session_recording:true});
+</script>
 </head>
 <body>
 <nav><a href="/"><img src="/images/img-02.webp" alt="BrakeHydro"></a><a class="back" href="/">← Retour au site</a></nav>
@@ -42,13 +47,16 @@ footer a{color:#7f8db0;margin:0 10px}
 <ul>
 <li><strong>Formspree</strong> (États-Unis) : réception et transmission des formulaires par e-mail ;</li>
 <li><strong>Netlify</strong> (États-Unis) : hébergement du site ;</li>
+<li><strong>PostHog</strong> (États-Unis) : mesure d'audience sans cookie ;</li>
 <li>notre messagerie professionnelle, pour le traitement de votre demande.</li>
 </ul>
 <p>Ces prestataires peuvent traiter des données hors de l'Union européenne, dans le cadre de garanties contractuelles appropriées (clauses contractuelles types).</p>
 <h2>Durée de conservation</h2>
 <p>3 ans à compter du dernier échange, sauf relation commerciale en cours.</p>
 <h2>Cookies</h2>
-<p>Ce site n'utilise aucun cookie publicitaire ni outil de mesure d'audience. Seuls des éléments techniques indispensables à son fonctionnement peuvent être utilisés.</p>
+<p>Ce site n'utilise aucun cookie : ni publicitaire, ni de mesure d'audience. Seuls des éléments techniques indispensables à son fonctionnement peuvent être utilisés.</p>
+<h2>Mesure d'audience</h2>
+<p>Nous mesurons la fréquentation du site avec PostHog (PostHog Inc., États-Unis), configuré <strong>sans cookie et sans stockage dans votre navigateur</strong>. Seules des données techniques de navigation sont collectées (pages consultées, type d'appareil et de navigateur, pays d'origine estimé, site de provenance) pour produire des statistiques de fréquentation. Aucun profil individuel n'est constitué et ces données ne sont pas utilisées à des fins publicitaires. Durée de conservation : 12 mois maximum.</p>
 <h2>Vos droits</h2>
 <p>Conformément au RGPD et à la loi marocaine 09-08, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité de vos données. Pour l'exercer : <a href="mailto:contact@brakehydro.com">contact@brakehydro.com</a>. Vous pouvez également introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>) ou de la CNDP (<a href="https://www.cndp.ma" rel="noopener">cndp.ma</a>).</p>
 

@@ -1,0 +1,31 @@
+name: Publier l'article de la semaine
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"   # chaque lundi à 7h UTC (8h heure de Paris en hiver)
+  workflow_dispatch:       # bouton « Run workflow » pour publier tout de suite
+
+permissions:
+  contents: write
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Publier le prochain brouillon
+        run: python3 scripts/publish_next.py
+      - name: Enregistrer et pousser
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "brakehydro-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Blog : publication automatique de l'article de la semaine"
+            git push
+          else
+            echo "Rien à publier."
+          fi
